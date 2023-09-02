@@ -13,6 +13,6 @@ source "amazon-ebs" "ubuntu-us-east-1" {
     Base_AMI_Name = "{{ .SourceAMIName }}"
     Extra         = "{{ .SourceAMITags.TagName }}"
   }
-  source_ami = data.hcp-packer-image.base-image.id
+  source_ami = data.hcp-packer-image.base-image-aovivo.id
 }
 
