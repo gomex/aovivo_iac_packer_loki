@@ -8,7 +8,7 @@ source "amazon-ebs" "ubuntu-us-east-1" {
   region        = "us-east-1"
   ami_name      = replace("loki-${local.image_id}", ".", "-")
   tags = {
-    OS_Version    = "Ubuntu"
+    OS_Version    = "Loki aula ao vivo"
     Release       = "${local.image_id}"
     Base_AMI_Name = "{{ .SourceAMIName }}"
     Extra         = "{{ .SourceAMITags.TagName }}"
