@@ -4,7 +4,7 @@ locals {
 
 variable "id_do_dono" {
   type    = number
-  default = "405151343467"
+  default = 405151343467
 }
 
 source "amazon-ebs" "ubuntu-us-east-1" {
