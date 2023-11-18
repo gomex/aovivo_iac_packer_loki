@@ -3,7 +3,7 @@ locals {
 }
 
 variable "id_do_dono" {
-  type = number
+  type    = number
   default = "405151343467"
 }
 
