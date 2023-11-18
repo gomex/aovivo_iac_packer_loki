@@ -2,6 +2,11 @@ locals {
   image_id = var.release != "" ? var.release : formatdate("YYYYMMDDhhmmss", timestamp())
 }
 
+variable "id_do_dono" {
+  type = number
+  default = "405151343467"
+}
+
 source "amazon-ebs" "ubuntu-us-east-1" {
   ssh_username  = var.user
   instance_type = "t3.micro"
@@ -19,7 +24,7 @@ source "amazon-ebs" "ubuntu-us-east-1" {
       name                = "base-*"
       root-device-type    = "ebs"
     }
-    owners      = ["405151343467"]
+    owners      = ["${var.id_do_dono}"]
     most_recent = true
   }
 }
